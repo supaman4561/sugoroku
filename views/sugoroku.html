@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>有終の美</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type='text/javascript' src='/client.js'></script>  
+        <script>
+            var socket = io();
+        </script>  
+        <link rel="stylesheet" type="text/css" href="/stylesheets/sugoroku.css">
+    </head>
+    <body>
+        <img id="calender" src="/images/february.jpg">
+        <script>
+            var name = prompt("名前を入力してください");
+            socket.emit('claiming', name);
+        </script>
+    </body>            
+</html>
